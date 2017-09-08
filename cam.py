@@ -8,3 +8,5 @@ app.debug = True
 def cam():
 	os.system("fswebcam -r 640x480 --no-banner static/images/webcam.jpg")
 	return render_template('cam.html' , pic="webcam.jpg")
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=8080)
